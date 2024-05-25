@@ -8,7 +8,7 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
 const Controls = () => {
     const router = useNavigation('Home');
-    const [color, colorbutton] = useState({ color1: false, color2: false, color3: false, color4: false, color5: false, });
+    const [color, colorbutton] = useState({ color1: false, color2: false, color3: false, color4: false, color5: false,color6:false });
 
     const SwitchColor = (key) => {
         colorbutton((prevState) => ({
@@ -30,13 +30,14 @@ const Controls = () => {
             </View>
             <ImageBackground source={TeslaC} style={styles.image} resizeMode="contain" >
 
-                <TouchableOpacity style={{ marginTop: 300, alignSelf: 'center' }}   >
-                    <MaterialCommunityIcons name='lock' size={27} color={color.color1 ? '#FFF' : '#808080'} />
+                <TouchableOpacity style={{ marginTop: 300, alignSelf: 'center' }}  onPress={() => SwitchColor('color6')}  >
+                    <MaterialCommunityIcons name='lock' size={27} color={color.color6 ? '#FFF' : '#808080'} />
                 </TouchableOpacity>
 
                 <View style={styles.contenerButton}  >
                     <TouchableOpacity style={styles.flashStyle} onPress={() => SwitchColor('color1')}  >
                         <MaterialCommunityIcons name='car-light-high' size={27} color={color.color1 ? "#fff" : "#808080"} />
+                        
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress={() => SwitchColor('color2')} style={styles.bepbepStyle} >

@@ -105,7 +105,6 @@ const FlixApp = () => {
 
             <MaterialCommunityIcons name={item.iconName}
               size={26} color='gray' />
-
             {/* Text اضفة نص */}
             <Text style={styles.optionText}>{item.name}</Text>
 

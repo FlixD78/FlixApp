@@ -8,6 +8,7 @@ import ClimateScreen from './nav/Componn/Climate';
 import DetailsScreen from './DetailsScreen';
 import Controls from './nav/Componn/Controls';
 import Location from './nav/Componn/Location';
+import LetsStart from './nav/Componn/LetsStart';
 const Stack = createNativeStackNavigator();
 
 
@@ -15,7 +16,8 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
+      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="letsStart">
+        <Stack.Screen name="letsStart" component={LetsStart} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Details" component={ClimateScreen} />
         <Stack.Screen name="Control" component={Controls} />

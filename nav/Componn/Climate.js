@@ -49,8 +49,6 @@ const Stack = createNativeStackNavigator();
       <ImageBackground source={climateImage} style={styles.image} resizeMode="cover" >
         
       <TouchableOpacity onPress={() => router.goBack('Home')} style={styles.back}>
-
-        
       <Entypo name="chevron-left" size={24} color="white" />
       </TouchableOpacity>
 
@@ -62,11 +60,11 @@ const Stack = createNativeStackNavigator();
 }}>
 <View style={styles.controlMazgan}
 >
-<TouchableOpacity style={{      padding: 3,backgroundColor: '#2f3030', borderRadius: 5,}}onPress={() =>  SwitchColor('color1')}>
+<TouchableOpacity style={styles.controlMazganButton}onPress={() =>  SwitchColor('color1')}>
       <Entypo name="air" size={24} color= {color.color1 ? 'white' : 'red'}  />
       </TouchableOpacity>
 
-<TouchableOpacity style={{      padding: 3,backgroundColor: '#2f3030', borderRadius: 5,}} onPress={()=>SwitchColor('color2')}   >
+<TouchableOpacity style={styles.controlMazganButton} onPress={()=>SwitchColor('color2')}   >
       <Entypo name="air" size={24} color={color.color2 ? 'white' : 'red'}   />
       </TouchableOpacity>
 
@@ -185,9 +183,9 @@ const styles = StyleSheet.create({
     flexDirection:"row",
     alignItems:"baseline",
                
-    marginTop:67,
-marginLeft:115,
-marginRight:115
+    marginTop:60,
+marginLeft:110,
+marginRight:110
   }
   ,
   controlMazgan2:{
@@ -198,6 +196,11 @@ marginRight:115
      alignItems:"baseline",
      flexDirection:"row",
      padding:120
+  },
+  controlMazganButton:{
+    padding: 3,
+    backgroundColor: '#2f3030',
+     borderRadius: 5,
   }
 });
 

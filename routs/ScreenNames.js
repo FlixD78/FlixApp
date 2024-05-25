@@ -1,4 +1,5 @@
 const ScreenNames = {
+  LetsStart:'letsStart',
   ClimateScreen: 'Details',
   Controls: 'Control',
   Location: 'Location',

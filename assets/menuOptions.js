@@ -1,4 +1,3 @@
-import FlixApp from "../nav/Componn/HomeScreen";
 import ScreenNames from "../routs/ScreenNames";
 
 
@@ -12,6 +11,7 @@ export default [
     iconName: 'car',
     href: '/controls',
     screenName: ScreenNames.Controls
+    
 
   }
   ,
